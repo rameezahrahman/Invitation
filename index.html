@@ -194,19 +194,23 @@ header{padding-top:calc(100vw*.42 + 20px);padding-top:clamp(190px,min(42vw,201px
 /* animated logo */
 .logo{width:clamp(230px,66vw,320px);margin:0 auto}
 .logo svg{width:100%;height:auto;display:block;overflow:visible}
-.logo .arc{fill:none;stroke:var(--gold);stroke-width:1.2;stroke-linecap:round;stroke-dasharray:1;stroke-dashoffset:1}
-.logo .stem{fill:none;stroke:var(--gold);stroke-width:1.1;stroke-linecap:round;stroke-dasharray:1;stroke-dashoffset:1}
-.logo .leaf{fill:var(--gold);opacity:0;transform-box:fill-box;transform-origin:0 50%;transform:scale(.2)}
-.logo .L{font-family:"EB Garamond","Libre Baskerville",serif;font-weight:500;font-size:96px;fill:var(--gold);opacity:0}
-.logo .A{font-family:"The Nautigal",cursive;font-weight:700;font-size:150px;fill:var(--gold);opacity:0}
+.logo .arc{fill:none;stroke:var(--gold);stroke-width:1.15;stroke-linecap:round;stroke-dasharray:1;stroke-dashoffset:1}
+.logo .stem{fill:none;stroke:var(--gold);stroke-width:1.05;stroke-linecap:round;stroke-dasharray:1;stroke-dashoffset:1}
+.logo .leaf{fill:none;stroke:var(--gold);stroke-width:.85;stroke-linecap:round;stroke-linejoin:round;opacity:0;transform-box:fill-box;transform-origin:0 50%;transform:scale(.2)}
+.logo .L{font-family:"EB Garamond","Libre Baskerville",serif;font-weight:400;font-size:72px;fill:var(--gold);opacity:0}
+.logo .A{opacity:0}
+.logo .A .a-fill{fill:var(--gold)}
+.logo .A .a-line{fill:none;stroke:var(--gold);stroke-width:1.25;stroke-linecap:round;stroke-linejoin:round}
 
 .shown .logo .arc{animation:draw 1.3s ease forwards .5s}
-.shown .logo .stem{animation:draw .6s ease forwards 1s}
+.shown .logo .stem{animation:draw .7s ease forwards .95s}
 .shown .logo .leaf{animation:pop .4s ease forwards}
-.shown .logo .l1{animation-delay:1.2s}.shown .logo .l2{animation-delay:1.3s}
-.shown .logo .l3{animation-delay:1.4s}.shown .logo .l4{animation-delay:1.5s}
-.shown .logo .l5{animation-delay:1.6s}.shown .logo .l6{animation-delay:1.7s}
-.shown .logo .l7{animation-delay:1.8s}
+.shown .logo .l1{animation-delay:1.15s}.shown .logo .l2{animation-delay:1.22s}
+.shown .logo .l3{animation-delay:1.29s}.shown .logo .l4{animation-delay:1.36s}
+.shown .logo .l5{animation-delay:1.43s}.shown .logo .l6{animation-delay:1.50s}
+.shown .logo .l7{animation-delay:1.57s}.shown .logo .l8{animation-delay:1.64s}
+.shown .logo .l9{animation-delay:1.71s}.shown .logo .l10{animation-delay:1.78s}
+.shown .logo .l11{animation-delay:1.85s}.shown .logo .l12{animation-delay:1.92s}
 .shown .logo .L1{animation:fadeup .7s ease forwards .7s}
 .shown .logo .A{animation:fadeup .7s ease forwards 1s}
 .shown .logo .L2{animation:fadeup .7s ease forwards 1.3s}
@@ -232,23 +236,40 @@ header{padding-top:calc(100vw*.42 + 20px);padding-top:clamp(190px,min(42vw,201px
 <div class="c1">
 <div class="logo rv">
   <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-label="R and R monogram">
-    <!-- open circle arc -->
-    <path class="arc" pathLength="1" d="M20.2 62.8 A88 88 0 1 1 37.8 162.2"/>
+    <!-- top-right open circle arc -->
+    <path class="arc" pathLength="1" d="M60.6 30.2 A80 80 0 0 1 180.3 118.7"/>
 
-    <!-- leaf sprig -->
-    <path class="stem" pathLength="1" d="M34 160 C52 150, 70 136, 90 118"/>
-    <g transform="translate(44,155) rotate(-62)"><path class="leaf l1" d="M0 0 C5 -6 13 -6 18 0 C13 6 5 6 0 0Z"/></g>
-    <g transform="translate(46,156) rotate(18)"><path class="leaf l2" d="M0 0 C5 -6 13 -6 18 0 C13 6 5 6 0 0Z"/></g>
-    <g transform="translate(58,146) rotate(-68)"><path class="leaf l3" d="M0 0 C5 -6 13 -6 18 0 C13 6 5 6 0 0Z"/></g>
-    <g transform="translate(60,147) rotate(14)"><path class="leaf l4" d="M0 0 C5 -6 13 -6 18 0 C13 6 5 6 0 0Z"/></g>
-    <g transform="translate(72,136) rotate(-72)"><path class="leaf l5" d="M0 0 C5 -6 13 -6 18 0 C13 6 5 6 0 0Z"/></g>
-    <g transform="translate(74,137) rotate(8)"><path class="leaf l6" d="M0 0 C5 -6 13 -6 18 0 C13 6 5 6 0 0Z"/></g>
-    <g transform="translate(88,120) rotate(-48)"><path class="leaf l7" d="M0 0 C5 -6 13 -6 18 0 C13 6 5 6 0 0Z"/></g>
+    <!-- bottom-left curved botanical stem following the circle -->
+    <path class="stem" pathLength="1" d="M114.1 177.2 A80 80 0 0 1 24.0 110.5"/>
 
-    <!-- monogram -->
-    <text class="A" x="84" y="134">&amp;</text>
-    <text class="L L1" x="50" y="98">R</text>
-    <text class="L L2" x="112" y="152">R</text>
+    <!-- outlined leaves with center veins along the curved stem -->
+    <g transform="translate(70.5,171.1) rotate(234) scale(.72)"><path class="leaf l1" d="M0 0 C4 -4.5 11 -4.5 16 0 C11 4.5 4 4.5 0 0 Z M1 0 Q7 -.4 12 0"/></g>
+    <g transform="translate(70.5,171.1) rotate(174) scale(.68)"><path class="leaf l2" d="M0 0 C4 -4.5 11 -4.5 16 0 C11 4.5 4 4.5 0 0 Z M1 0 Q7 -.4 12 0"/></g>
+    <g transform="translate(62.5,166.9) rotate(212)"><path class="leaf l3" d="M0 0 L4.5 0 M6.2 0 a1.6 1.6 0 1 0 0 .01z"/></g>
+
+    <g transform="translate(56.0,162.7) rotate(246) scale(.86)"><path class="leaf l4" d="M0 0 C4 -4.5 11 -4.5 16 0 C11 4.5 4 4.5 0 0 Z M1 0 Q7 -.4 12 0"/></g>
+    <g transform="translate(56.0,162.7) rotate(184) scale(.84)"><path class="leaf l5" d="M0 0 C4 -4.5 11 -4.5 16 0 C11 4.5 4 4.5 0 0 Z M1 0 Q7 -.4 12 0"/></g>
+
+    <g transform="translate(43.6,151.5) rotate(256) scale(.96)"><path class="leaf l6" d="M0 0 C4 -4.5 11 -4.5 16 0 C11 4.5 4 4.5 0 0 Z M1 0 Q7 -.4 12 0"/></g>
+    <g transform="translate(43.6,151.5) rotate(196) scale(.94)"><path class="leaf l7" d="M0 0 C4 -4.5 11 -4.5 16 0 C11 4.5 4 4.5 0 0 Z M1 0 Q7 -.4 12 0"/></g>
+
+    <g transform="translate(33.7,138.0) rotate(266) scale(.94)"><path class="leaf l8" d="M0 0 C4 -4.5 11 -4.5 16 0 C11 4.5 4 4.5 0 0 Z M1 0 Q7 -.4 12 0"/></g>
+    <g transform="translate(33.7,138.0) rotate(208) scale(.94)"><path class="leaf l9" d="M0 0 C4 -4.5 11 -4.5 16 0 C11 4.5 4 4.5 0 0 Z M1 0 Q7 -.4 12 0"/></g>
+
+    <g transform="translate(26.9,122.7) rotate(274) scale(.84)"><path class="leaf l10" d="M0 0 C4 -4.5 11 -4.5 16 0 C11 4.5 4 4.5 0 0 Z M1 0 Q7 -.4 12 0"/></g>
+    <g transform="translate(26.9,122.7) rotate(222) scale(.84)"><path class="leaf l11" d="M0 0 C4 -4.5 11 -4.5 16 0 C11 4.5 4 4.5 0 0 Z M1 0 Q7 -.4 12 0"/></g>
+
+    <g transform="translate(24.0,110.5) rotate(258) scale(.92)"><path class="leaf l12" d="M0 0 C4 -4.5 11 -4.5 16 0 C11 4.5 4 4.5 0 0 Z M1 0 Q7 -.4 12 0"/></g>
+
+    <!-- calligraphic ampersand -->
+    <g class="A">
+      <path class="a-fill" d="M117 48 C121 48, 124 51, 122 56 C118 67, 100 86, 89 99 C82 107, 84 115, 93 116 C102 117, 112 106, 120 93 C125 86, 132 86, 136 90 L135 91 C131 87.5, 125 87.5, 121 94 C112 108, 102 118.5, 92 118 C79 117.5, 77 105, 84 95 C94 81, 112 64, 117 53 C118.5 50, 117.5 48.5, 117 48 Z"/>
+      <path class="a-line" d="M117 48.5 C107 48, 100 60, 103 74 C106 87, 114 98, 112 112 C110 123, 101 128, 92 127 C85 126, 81 121, 82 115"/>
+    </g>
+
+    <!-- monogram R & R -->
+    <text class="L L1" x="38" y="84">R</text>
+    <text class="L L2" x="115" y="148">R</text>
   </svg>
 </div>
 </div></section>
